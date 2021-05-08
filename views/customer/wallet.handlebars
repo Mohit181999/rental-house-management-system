@@ -1,0 +1,48 @@
+<div>
+<h2 class="large text-primary">Good Day, Sir / Madam</h2>
+ {{#if success}}
+ <br>
+  <div class="success">
+    <strong>{{success}} </strong>  
+  </div>
+  <br>
+{{/if}}
+ <p class="lead">Your current account balance</p>
+ <p class="large text-primary">Rs {{balance}}</p>
+<br>
+ <p class="lead">Fill Details to add money in the wallet</p>
+ 
+<form action="/user/wallet" method="POST" class="form">
+    <div class="form-group">
+        <div class="form-group">
+            <label>Name of Bank</label>
+            <input type="text" required />
+        </div>
+        <div class="form-group">
+            <label>Branch</label>
+            <input type="text" required/>
+        </div>
+         <div class="form-group">
+            <label>Credit card no.</label>
+            <input type="text" required/>
+        </div>
+           <div class="form-group">
+            <label>Pin</label>
+            <input type="text" required/>
+        </div>
+        <div class="form-group">
+           <p><label>Amount</label>
+
+        <input type="text" id="amount" name="amount" value='{{amount}}' placeholder="" required/></p></div>
+        </div>
+     
+        <div class="form-group">
+        <button type="submit" class="registerbtn">Add</button>
+        </div>
+             
+        
+
+
+
+ </form>
+ </div>

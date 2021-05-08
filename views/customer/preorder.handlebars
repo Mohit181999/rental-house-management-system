@@ -1,0 +1,124 @@
+ <div>
+<h2 class="large text-primary">Menu</h2>
+
+
+
+{{#if success}}
+  <div class="success">
+    <strong>{{success}} </strong>  
+  </div>
+{{/if}}
+
+{{#each error}}
+  <div class="success">
+    <strong>{{message}} </strong>  
+  </div>
+{{/each}}
+
+
+ <p class="lead">BREAKFAST</p>
+      {{#each item}}
+    <div class="card">
+  <p>img</p>
+  <div class="container">
+    <h4><b>{{Name}}</b></h4> 
+    <p>Rs {{price}}</p> 
+    <p>Type: {{category}}</p>
+    <p>
+       <form action="/user/preorder/{{id}}" method="post" class="form">
+    <div class="form-group">
+      <p><label>quantity</label>
+        <input type="number" id="quantity" name="quantity" value='{{quantity}}' placeholder=""/> 
+        <label>Time</label>
+        <input type="time" id="time" name="time" value='{{time}}' placeholder=""/>
+        <button type="submit" class="button">Add</button> </p>
+          
+        </div>         
+        
+    </form>
+    </p>
+     
+
+    
+  </div>
+</div>
+<br><br>
+{{/each}}
+<p class="lead">LUNCH</p>
+  {{#each item1}}
+    <div class="card">
+  <p>img</p>
+  <div class="container">
+    <h4><b>{{Name}}</b></h4> 
+    <p>Rs {{price}}</p> 
+    <p>Type: {{category}}</p>
+     <p>
+         <form action="/user/preorder/{{id}}" method="post" class="form">
+    <div class="form-group">
+      <p><label>quantity</label>
+        <input type="number" id="quantity" name="quantity" value='{{quantity}}' placeholder=""/> 
+        <label>Time</label>
+        <input type="time" id="time" name="time" value='{{time}}' placeholder=""/>
+        <button type="submit" class="button">Add</button> </p>
+          
+        </div>         
+        
+    </form>
+    </p>
+  </div>
+</div>
+<br><br>
+{{/each}}
+<p class="lead">DINNER</p>
+  {{#each item2}}
+    <div class="card">
+  <p>img</p>
+  <div class="container">
+    <h4><b>{{Name}}</b></h4> 
+    <p>Rs {{price}}</p> 
+    <p>Type: {{category}}</p>
+     <p>
+        <form action="/user/preorder/{{id}}" method="post" class="form">
+    <div class="form-group">
+      <p><label>quantity</label>
+        <input type="number" id="quantity" name="quantity" value='{{quantity}}' placeholder=""/> 
+        <label>Time</label>
+        <input type="time" id="time" name="time" value='{{time}}' placeholder=""/>
+        <button type="submit" class="button">Add</button> </p>
+          
+        </div>         
+        
+    </form>
+        
+    </p>
+  </div>
+</div>
+<br><br>
+{{/each}}
+
+<p class="lead">DESSERT</p>
+  {{#each item3}}
+    <div class="card">
+  <p>img</p>
+  <div class="container">
+    <h4><b>{{Name}}</b></h4> 
+    <p>Rs {{price}}</p> 
+    <p>Type: {{category}}</p>
+     <p>
+        <form action="/user/preorder/{{id}}" method="post" class="form">
+    <div class="form-group">
+      <p><label>quantity</label>
+        <input type="number" id="quantity" name="quantity" value='{{quantity}}' placeholder=""/> 
+        <label>Time</label>
+        <input type="time" id="time" name="time" value='{{time}}' placeholder=""/>
+        <button type="submit" class="button">Add</button> </p>
+          
+        </div>         
+        
+    </form>
+    </p>
+  </div>
+</div>
+<br><br>
+{{/each}}
+</div>

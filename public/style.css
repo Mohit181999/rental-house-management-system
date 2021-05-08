@@ -1,0 +1,206 @@
+h2{
+    
+    color:whitesmoke;
+
+}
+
+body{
+    
+   font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      background-color: #fff;
+      color: #333;    
+      margin: 0;
+      
+}
+ 
+
+ 
+ 
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  opacity: 0.9;
+  margin-left:150px ;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  opacity: 0.9; 
+    
+  background-color: #333;
+  color: #f2f2f2;
+  text-align: center;
+  overflow: hidden;
+}
+.topnav {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    border-bottom: solid 1px var(--primary-color);
+   opacity: 0.9; 
+   border-bottom: solid 1px var(--primary-color);
+    background-color:black;
+    overflow: hidden;
+    padding: 10px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    
+  }
+  .first{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 400px;
+  }
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .landing {
+    position: relative;
+    background: url('./house-rented-purpose.jpg') no-repeat center center/cover;
+    height: 100vh;
+  }
+  .landing-inner {
+    color: #fff;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .button {background-color: #555555;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 10px;
+    }
+  .dark-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }   
+  .success{
+    margin-left:150px ;
+    background-color:gainsboro;
+    width:50%;
+    color:black;
+    opacity: 80%;
+    padding: 10px;
+  }
+  .fail{
+    margin-left:150px ;
+    background-color:gainsboro;
+    width:50%;
+    color:red;
+    opacity: 80%;
+    padding: 10px;
+  }
+  .large {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+     
+  }
+  .text-primary {
+    color:#1E90FF;
+    margin-left:150px ;
+  }
+  .lead {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left:150px ;
+    color:#1E90FF;
+  }
+  .form{
+    display: ;
+  }
+   .form-group {
+    margin: 1.2rem 0;
+    margin-left:150px ;
+        
+  }
+   
+  
+  .form-text {
+    display: block;
+    margin-top: 0.3rem;
+    color: #888;
+    
+  }
+.form select{
+   padding: 5px;
+   display: block;
+   width: 70%;
+   padding: 0.4rem;
+   font-size: 1.2rem;
+   border: 1px solid #ccc;
+  }
+  .form input[type='text'],
+.form input[type='email'],
+.form input[type='password']
+
+  {
+  display: block;
+  width: 70%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  
+}
+ 
+.registerbtn {
+  font: inherit;
+  
+} 

@@ -1,0 +1,50 @@
+<div>
+    <h2 class="large text-primary">Premium subscriber customer</h2>
+    {{#if success}}
+  <div class="success">
+    <strong>{{success}} </strong>  
+  </div>
+{{/if}}
+<br>
+    {{#if user}}
+    <table class="table">
+    <thead>
+        <tr>
+             
+            <th class="hide-sm">Name</th>
+            <th class="hide-sm">Email</th>
+            <th class="hide-sm">Address</th>            
+            <th class="hide-sm">Duration of subcription</th>
+            <th class ="hide-sm">Cancel subcription</th>
+             
+            
+        </tr>
+    </thead>
+    <tbody>
+            {{#each user}}
+            
+            <tr>
+                   
+                    <td>{{user.Name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.address}}</td>                    
+                    <td>{{formatDate date 'DD/MM/YYYY'}} to {{expiryDate date }}</td>
+                    <td>
+                        <form class="form" method="post" action="/admin/premium/{{id}}">
+                        <button type="submit" class="view">Cancel</button>
+                        </form>    
+
+
+                    </td> 
+                   
+                     
+                    
+                    
+            </tr>
+            
+            {{/each}}
+    </tbody>
+    {{else}}
+     <p class="lead">No customers are present</p>
+    {{/if}}
+</div>

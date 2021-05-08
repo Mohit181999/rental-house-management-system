@@ -1,0 +1,46 @@
+<div>
+    <h2 class="large text-primary">Non Premium subscriber customer</h2>
+     {{#if success}}
+  <div class="success">
+    <strong>{{success}} </strong>  
+  </div>
+{{/if}}
+<br>
+    {{#if customer}}
+    <table class="table">
+    <thead>
+        <tr>
+             
+            <th class="hide-sm">Name</th>
+             <th class="hide-sm">Email</th>
+            <th class="hide-sm">Address</th>
+            <th class="hide-sm">Date of joining</th> 
+
+             
+            
+             
+            
+        </tr>
+    </thead>
+    <tbody>
+            {{#each customer}}
+            
+            <tr>
+                   
+                    <td>{{user.Name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.address}}</td>                    
+                    <td>{{formatDate user.date 'DD/MM/YYYY'}}</td>
+                              
+                     
+                    
+                    
+            </tr>
+            
+            {{/each}}
+    </tbody>
+     {{else}}
+     <p class="lead">No customers are present</p>
+    {{/if}}
+</div>
+</div>

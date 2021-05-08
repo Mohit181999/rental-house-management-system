@@ -1,0 +1,38 @@
+<div>
+
+{{#if error}}
+<br>
+ <div class="success">
+     
+    <strong>{{error}} </strong>  
+  </div>
+{{/if}}
+<h2 class="large text-primary">Want faster delivery then join permium membership</h2>
+
+<form action="/user/subcription" method="POST"class="form">
+    <div class="form-group">
+        <p class="lead">Amount to be paid is 120 and subscription is valid for 3 months</p> 
+        <p class="lead">Enter details for making payment</p>
+        <div class="form-group">
+            <label>Name of Bank</label>
+            <input type="text" required />
+        </div>
+         <div class="form-group">
+            <label>Branch</label>
+            <input type="text" required/>
+        </div>
+         <div class="form-group">
+            <label>Credit card no.</label>
+            <input type="text" required/>
+        </div>
+           <div class="form-group">
+            <label>Pin</label>
+            <input type="text" required/>
+        </div>
+        <button type="submit" class="registerbtn">APPLY</button>
+
+
+</form>
+
+
+</div>

@@ -1,0 +1,121 @@
+<div>
+    <h2 class="textc">Orders</h2>
+    
+    {{#ifsub order.category}}
+    <h2 class="textc">Premium subcription taken on date :  {{formatDate order.date 'DD/MM/YYYY'}} </h2>
+    <h2 class="textc">Premium subcription expires on date : {{ expiryDate order.date 'DD/MM/YYYY'}}</h2>
+     
+    {{/ifsub}}
+
+    {{#each order}}
+    {{#each item}}
+     {{#ifpre category}}
+    <h2 class="textc">Pre booked order</h2>
+<table class="table">
+    <thead>
+        <tr>
+             
+            <th class="hide-sm">Name</th>
+            <th class="hide-sm">Price</th>
+            <th class="hide-sm">quantity</th>
+            <th class="hide-sm">category</th>
+        </tr>
+    </thead>
+    <tbody>
+            
+            <tr>
+                    
+                    <td>{{Name}}</td>
+                    <td>{{price}}</td>
+                    <td>{{quantity}}</td>                   
+                    <td>{{category}}</td> 
+                   
+                     
+
+                   
+            </tr>
+            
+    </tbody>
+   </table>
+   
+    {{/ifpre}} 
+    {{/each}}
+            {{/each}}
+             
+
+    {{#each order}}
+    {{#each item}}
+     {{#iftop category}}
+    <h2 class="textc">Top priority</h2>
+<table class="table">
+    <thead>
+        <tr>
+             
+            <th class="hide-sm">Name</th>
+            <th class="hide-sm">Price</th>
+            <th class="hide-sm">quantity</th>
+            <th class="hide-sm">category</th>
+        </tr>
+    </thead>
+    <tbody>
+            
+            <tr>
+                    
+                    <td>{{Name}}</td>
+                    <td>{{price}}</td>
+                    <td>{{quantity}}</td>                   
+                    <td>{{category}}</td> 
+                   
+                     
+
+                   
+            </tr>
+            
+    </tbody>
+   </table>
+   
+    {{/iftop}} 
+    {{/each}}
+            {{/each}}
+             
+   
+    
+   <br>
+   
+    {{#each order}}
+    {{#each item}}
+    {{#ifless category}}
+   <h2 class="textc">Less priority</h2>
+   <table class="table">
+    <thead>
+        <tr>
+             
+            <th class="hide-sm">Name</th>
+            <th class="hide-sm">Price</th>
+            <th class="hide-sm">quantity</th>
+            <th class="hide-sm">category</th>
+        </tr>
+    </thead>
+    <tbody>
+           
+            <tr>
+                     
+                    <td>{{Name}}</td>
+                    <td>{{price}}</td>
+                    <td>{{quantity}}</td>                   
+                    <td>{{category}}</td> 
+                      
+
+                   
+            </tr>
+            
+    </tbody>
+   </table> 
+   {{/ifless}} 
+    {{/each}}
+            {{/each}}
+ 
+
+
+
+</div>

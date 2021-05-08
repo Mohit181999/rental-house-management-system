@@ -1,0 +1,17 @@
+<div>
+<h2 class="large text-primary">Booking List</h2>
+ <p class="lead">Here list of tenet requested to see your property</p>
+      {{#each tenets}}
+      
+    <div class="card">
+       {{Name}}
+  <p><h4><b>{{email}}</b></h4></p>
+  <div class="container">
+    <form action="/admin/menu/{{id}}" method="POST">
+    <button type="submit" class="button">DELETE</button>
+    </form>    
+   </div>
+ </div>
+<br><br>
+{{/each}}
+</div>

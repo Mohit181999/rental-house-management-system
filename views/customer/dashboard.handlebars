@@ -1,0 +1,18 @@
+<div>
+    <h2 class="large text-primary">Dashboard</h2>
+    
+{{#if success}}
+<br>
+  <div class="success">
+    <strong>{{success}} </strong>  
+  </div>
+  <br>
+{{/if}}
+    <p class="lead">Name : {{user.Name}}</p>
+    <p class="lead">Email : {{user.email}}</p>
+    <p class="lead">Address : {{user.Address}} </p>
+    <p class="lead">Date of joining : {{formatDate user.date 'DD/MM/YYYY'}} </p>
+    
+    
+    
+</div> 
