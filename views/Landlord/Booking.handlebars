@@ -1,0 +1,49 @@
+
+<div>
+<h2 class="large text-primary">Houses</h2>
+ <p class="lead">Appartment</p>
+      {{#each item}}
+      
+    <div class="card">
+       <img height="50px" class="img-responsive" src="/uploads/{{file}}" alt="">
+  <p><h4><b>{{Address}}</b></h4></p>
+  <div class="container">
+    <p>Rs {{rent}}</p> 
+    <form action="/Landlord/house/{{hid}}" method="GET">
+    <button type="submit" class="button">View Bookings</button>
+    </form>    
+  </div>
+</div>
+<br><br>
+{{/each}}
+<p class="lead">Bunglow</p>
+  {{#each item1}}
+    <div class="card">
+       <img height="50px" class="img-responsive" src="/uploads/{{file}}" alt="">
+   <h4><b>{{Address}}</b></h4> 
+  <div class="container">
+    
+    <p>Rs {{rent}}</p> 
+    <form action="/Landlord/menu/{{id}}" method="POST">
+    <button type="submit" class="button">DELETE</button>
+    </form>
+  </div>
+</div>
+<br><br>
+{{/each}}
+<p class="lead">Pg</p>
+  {{#each item2}}
+    <div class="card">
+       <img height="50px" class="img-responsive" src="/uploads/{{file}}" alt="">
+    <h4><b>{{Address}}</b></h4> 
+  <div class="container">
+   
+    <p>Rs {{rent}}</p> 
+    <form action="/Landlord/menu/{{id}}" method="POST">
+    <button type="submit" class="button">DELETE</button>
+    </form>
+  </div>
+</div>
+<br><br>
+{{/each}}
+</div>

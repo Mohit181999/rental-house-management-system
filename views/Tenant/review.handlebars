@@ -1,0 +1,23 @@
+<div>
+   <p class="lead">Reviews</p>
+<form class="form" action="/Tenant/HouseReview/{{hid}}" method="post">
+    <div class="form-group">
+        <label >Add Review for this property</label>
+        <br>   
+        <textarea name="text" class="textareacss"></textarea>
+    </div> 
+    <button type="submit" class="registerbtn">Add</button>
+</form>
+{{#each reviews}}
+<br><br><br>
+    <div class="card">
+    
+  <div class="container">
+    <h4><b>{{UserName}}</b></h4>
+    <p>{{Text}}</p> 
+   
+   </div>
+   </div>
+{{/each}}
+
+</div>

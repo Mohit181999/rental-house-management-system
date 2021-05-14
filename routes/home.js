@@ -27,11 +27,6 @@ router.post('/register',async (req,res)=>{
 
     }
    else{   
-    /*bcrypt.genSalt(10, (err, salt)=>{
-        bcrypt.hash(password, salt, (err, hash)=>{
-            password = hash;            
-        });
-    });*/
     const user = {email:req.body.email,password:req.body.password,role:req.body.role}
     let iq = 'INSERT INTO USER SET ?';
     db.query(iq,user,(err,result)=>{
@@ -57,7 +52,7 @@ router.post('/register',async (req,res)=>{
             if(err)throw err;
             console.log(result);
             req.flash('success','Registered successfully');
-            res.redirect('/admin'); 
+            res.redirect('/Landlord'); 
         }) ;
         })   
     }
@@ -77,7 +72,7 @@ router.post('/register',async (req,res)=>{
             if(err)throw err;
             console.log(result);
             req.flash('success','Registered successfully');
-            res.redirect('/customer_login'); 
+            res.redirect('/Tenant'); 
             }) ;
         });       
        
@@ -85,8 +80,8 @@ router.post('/register',async (req,res)=>{
 }
 });
 
-router.get('/customer_login',(req,res)=>{
-res.render('home/customer_login')
+router.get('/Tenant',(req,res)=>{
+res.render('home/Tenant')
 });
 
 passport.use(new LocalStrategy({usernameField: 'email'},(email, password, done)=> {
@@ -121,7 +116,7 @@ passport.deserializeUser(function(id, done) {
     })
 });
 
-router.post('/customer_login', (req, res, next)=>{   
+router.post('/Tenant', (req, res, next)=>{   
     let fq ='SELECT * FROM TENANT WHERE email = ?';
     db.query(fq,req.body.email,(err,owner)=>{
         if(err)throw err;
@@ -132,8 +127,8 @@ router.post('/customer_login', (req, res, next)=>{
         }
         else{
             passport.authenticate('local',{
-                successRedirect: '/user',
-                failureRedirect: '/customer_login',
+                successRedirect: '/Tenant/dashboard',
+                failureRedirect: '/Tenant',
                 failureFlash: true
             })(req, res, next);
         }
@@ -142,10 +137,10 @@ router.post('/customer_login', (req, res, next)=>{
 });
 
 
-router.get('/admin',(req,res)=>{
-    res.render('home/admin_login')
+router.get('/Landlord',(req,res)=>{
+    res.render('home/Landlord')
 });
-router.post('/admin',(req,res,next)=>{
+router.post('/Landlord',(req,res,next)=>{
     let fq ='SELECT * FROM OWNER WHERE email = ?';
     db.query(fq,req.body.email,(err,owner)=>{
         if(err)throw err;
@@ -155,8 +150,8 @@ router.post('/admin',(req,res,next)=>{
         }
         else{
             passport.authenticate('local',{
-                successRedirect: '/admin/dashboard',
-                failureRedirect: '/admin',
+                successRedirect: '/Landlord/dashboard',
+                failureRedirect: '/Landlord',
                 failureFlash: true
             })(req, res, next);
         }

@@ -15,12 +15,8 @@ app.use(express.static(path.join(__dirname,'public')));
 
 app.use(fileUpload());
 
-
-
-// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
-// parse application/json
 app.use(bodyParser.json())
 
 app.use(session({
@@ -67,23 +63,12 @@ app.use(passport.session());
 
 app.use((req,res,next)=>{
     res.locals.user = req.user || null ;
-    //res.locals.owner = req.owner || null ;
     next();
 })
 
 app.use('/',home);
-app.use('/admin',require('./routes/admin'));
-app.use('/user',require('./routes/customer'));
-
-/*mongoose.connect("mongodb+srv://darth:darth123@rhm.37voy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-{ useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex:true,
-  useFindAndModify:false
-},
-()=>console.log('db connected'));*/
-
-
+app.use('/Landlord',require('./routes/Landlord'));
+app.use('/Tenant',require('./routes/Tenant'));
 
 db.connect((err)=>{
     if(err){

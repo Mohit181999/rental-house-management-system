@@ -1,0 +1,58 @@
+
+<div>
+
+<h2 class="large text-primary">Your houses</h2>
+{{#if success}}
+  <div class="success">
+    <strong>{{success}} </strong>  
+  </div>
+{{/if}}
+ <p class="lead">Appartment</p>
+      {{#each item}}
+      
+    <div class="card">
+       <img height="50px" class="img-responsive" src="/uploads/{{file}}" alt="">  
+  <div class="container">
+    <p><b>{{Address}}</b></p>
+    <p>Rs {{rent}}</p> 
+    <form action="/Landlord/housedel/{{hid}}" method="POST">
+    <button type="submit" class="button">DELETE</button>
+    </form><br>
+    <form action="/Landlord/HouseReview/{{hid}}" method="get">
+    <button type="submit" class="button">Reviews</button>
+    </form>    
+  </div>
+</div>
+<br><br>
+{{/each}}
+<p class="lead">Bunglow</p>
+  {{#each item1}}
+    <div class="card">
+       <img height="50px" class="img-responsive" src="/uploads/{{file}}" alt="">
+   <h4><b>{{Address}}</b></h4> 
+  <div class="container">
+    
+    <p>Rs {{rent}}</p> 
+    <form action="/Landlord/housedel/{{hid}}" method="POST">
+    <button type="submit" class="button">DELETE</button>
+    </form>
+  </div>
+</div>
+<br><br>
+{{/each}}
+<p class="lead">Pg</p>
+  {{#each item2}}
+    <div class="card">
+       <img height="50px" class="img-responsive" src="/uploads/{{file}}" alt="">
+    <h4><b>{{Address}}</b></h4> 
+  <div class="container">
+   
+    <p>Rs {{rent}}</p> 
+    <form action="/Landlord/housedel/{{hid}}" method="POST">
+    <button type="submit" class="button">DELETE</button>
+    </form>
+  </div>
+</div>
+<br><br>
+{{/each}}
+</div>

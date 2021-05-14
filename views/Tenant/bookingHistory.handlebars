@@ -1,0 +1,16 @@
+ <div>
+    <h3 class="textc">Booking History</h2>
+    {{#each booking }}
+   <div class="card">
+       <img height="50px" class="img-responsive" src="/uploads/{{file}}" alt="">
+  <p><h4><b>{{Address}}</b></h4></p>
+  <div class="container">
+    <p>Rs {{rent}}</p> 
+    <form action="/Tenant/menu/{{id}}" method="POST">
+    <button type="submit" class="button">DELETE</button>
+    </form>    
+  </div>
+</div>
+    {{/each}}
+
+</div>

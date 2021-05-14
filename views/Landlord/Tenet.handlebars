@@ -1,0 +1,30 @@
+<div>
+<h2 class="large text-primary">Booking List</h2>
+ <p class="lead">Here list of tenet requested to see your property</p>
+    <table class="table">
+    <thead>
+        <tr>
+             
+            <th class="hide-sm">Name</th>
+            <th class="hide-sm">Email</th>
+            <th class="hide-sm"></th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each tenets}}            
+            <tr>                   
+                    <td>{{Name}}</td>
+                    <td>{{email}}</td>
+                    <td>
+                        <form action="/Landlord/dashboard/{{id}}" method="POST">
+                        <button type="submit" class="view">DELETE</button>
+                    </form>
+                    </td>
+                    
+            </tr>
+            
+          
+          {{/each}}
+    </tbody>
+    </table>
+</div>

@@ -1,0 +1,73 @@
+ <div>
+<h2 class="large text-primary">Houses</h2>
+{{#if success}}
+  <div class="success">
+    <strong>{{success}} </strong>  
+  </div>
+{{/if}}
+
+{{#each error}}
+  <div class="success">
+    <strong>{{message}} </strong>  
+  </div>
+{{/each}}
+
+
+ <p class="lead">Appartment</p>
+      {{#each item}}
+    <div class="card">
+       <img height="50px" class="img-responsive" src="/uploads/{{file}}" alt="">  
+  <div class="container">
+    <p><b>{{Address}}</b></p>
+    <p>Rs {{rent}}</p> 
+    <form action="/Tenant/house/{{hid}}" method="POST">
+    <button type="submit" class="button">Schedule Meeting</button>
+    </form><br>
+    <form action="/Tenant/houseReview/{{hid}}" method="get">
+    <button type="submit" class="button">Reviews</button>
+    </form>    
+  </div>
+</div>
+<br><br>
+{{/each}}
+<p class="lead">Bunglow</p>
+  {{#each item1}}
+    <div class="card">
+  <h4><b>{{Address}}</b></h4> 
+  <div class="container">
+    
+    <p>Rs {{rent}}</p> 
+     <p>
+        <form action="/Tenant/house/{{hid}}" method="POST">
+    <button type="submit" class="button">Schedule Meeting</button>
+    </form><br>
+    <form action="/Tenant/houseReview/{{hid}}" method="get">
+    <button type="submit" class="button">Reviews</button>
+    </form>
+    </p>
+  </div>
+</div>
+<br><br>
+{{/each}}
+<p class="lead">Pg</p>
+  {{#each item2}}
+    <div class="card">
+   <h4><b>{{Address}}</b></h4>
+  <div class="container">
+     
+    <p>Rs {{rent}}</p> 
+     <p>
+         <form action="/Tenant/house/{{hid}}" method="POST">
+    <button type="submit" class="button">Schedule Meeting</button>
+    </form><br>
+    <form action="/Tenant/houseReview/{{hid}}" method="get">
+    <button type="submit" class="button">Reviews</button>
+    </form>
+        
+    </p>
+  </div>
+</div>
+<br><br>
+{{/each}}
+
+</div>

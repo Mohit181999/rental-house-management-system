@@ -1,0 +1,40 @@
+ <div>
+       <h2 class="large text-primary">Owner Login</h2>
+       {{#if error}}
+       <br>
+                  <div class="fail">
+                  <strong>{{error}} </strong>  
+                  </div>
+        <br>
+                  {{/if}}
+        {{#if success}}
+  <div class="success">
+    <strong>{{success}} </strong>  
+  </div>
+{{/if}}
+<form action="/Landlord" method="post" class="form">
+      
+        
+         <div class="form-group">
+             <label ><b>Username</b></label> 
+        <input  type="email" value = '{{email}}' name="email" placeholder="Username">
+        <p>The username is Alphanumeric and can contain underscores(_) Must contain atleast 5 Characters</p></div>
+        
+          <div class="form-group">
+              <label ><b>Passsword</b></label> 
+        <input value='{{password}}' type="password" name="password" placeholder="Password">
+        <p>The Password is Alphanumeric and can contain @ and hyphens(-) Must contain 8 to 20 Characters</p>
+        </div>
+    
+        
+        <button type="submit" class="registerbtn">Login</button>
+            <div class="form-group">
+                  <p>Don't have an account? <a href="/register">Sign up</a></p>
+                </div>
+        
+        <script src="admin_login_js.js"></script>
+    </form>
+
+ </div>
+    
+ 
