@@ -18,7 +18,7 @@ Steps to run the project are as follow: -
       
 2. Run the project:-
       steps to run the project:-
-      1.Open terminal in project directory and type npm install(node should be installed in your system to type this command)
+      1.Open terminal in project directory and type npm install(nodejs should be installed in your system to type this command)
       2.after that type node server.js or nodemon server.js, once message stating db connected appears then open browser 
       3.type http://localhost:4343/
       
