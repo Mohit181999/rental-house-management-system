@@ -1,5 +1,8 @@
 # Rental House Management System
 
+Here is video link showing how our project works :- 
+ https://drive.google.com/file/d/1TLT7NMk1pTDBmJ6eheN5nbmPGdWo4Pug/view?usp=sharing
+
 ## Steps to run the project are as follow:
 
 Database used for this project is mySQL hence in order to run project you can use a virtual server i.e [XAMPP](https://www.apachefriends.org/download.html) on your PC, Install XAMPP, open xampp control panel and start Apache server and in the browser and go to phpmyadmin `http://localhost/phpmyadmin/` and extract the project files, then the steps are as follow:
